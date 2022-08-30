@@ -7,36 +7,35 @@ e punti fatti dalla squadra ospite. Stampiamo a schermo tutte le partite con que
 Olimpia Milano - Cantù | 55-60 */
 
 $games = [
-
     [ 
-        'city' => 'Los Angeles'
-        'home' => 'Lakers'
-        'guest' => 'Knights'
-        'home_point' => '195'
-        'guest_point' => '188'
-    ]
+        'city' => 'Los Angeles',
+        'home' => 'Lakers',
+        'guest' => 'Knights',
+        'home_point' => '195',
+        'guest_point' => '188',
+    ];
     [ 
-        'city' => 'San Francisco'
-        'home' => 'Warriors'
-        'guest' => 'Celtics'
-        'home_point' => '211'
-        'guest_point' => '201'
-    ]
+        'city' => 'San Francisco',
+        'home' => 'Warriors',
+        'guest' => 'Celtics',
+        'home_point' => '211',
+        'guest_point' => '201',
+    ];
     [ 
-        'city' => 'Washington'
-        'home' => 'Wizards'
-        'guest' => 'Nuggets'
-        'home_point' => '124'
-        'guest_point' => '147'
-    ]
+        'city' => 'Washington',
+        'home' => 'Wizards',
+        'guest' => 'Nuggets',
+        'home_point' => '124',
+        'guest_point' => '147',
+    ];
     [ 
-        'city' => 'Miami'
-        'home' => 'Bulls'
-        'guest' => 'Jazzs'
-        'home_point' => '197'
-        'guest_point' => '214'
-    ]
-]
+        'city' => 'Miami',
+        'home' => 'Bulls',
+        'guest' => 'Jazzs',
+        'home_point' => '197',
+        'guest_point' => '214',
+    ];
+    ];
 
 var_dump($games);
 
@@ -57,7 +56,7 @@ var_dump($games);
         <li>
         <h5><?php $games['city'] ?></h5>
         </li>
-        <?php endfor ?>
+        <?php endfor; ?>
     </ul>
 </body>
 </html>
