@@ -9,18 +9,32 @@ punto e una chiocciola e che age sia un numero. Se tutto è ok
 stampare “Accesso riuscito”, altrimenti “Accesso negato”;
 */
 
-$name= $_GET['name'] ?? '';
-$age= $_GET['age'] ?? '';
-$email= $_GET['email'] ?? '';
+$name = $_GET['name'] ?? '';
+$age = $_GET['age'] ?? '';
+$email = $_GET['email'] ?? '';
 
-if ( $name < 3 ) {
-    echo 'Il nome deve contenere più di tre caratteri';
+if (!$name || !$age || !$email) {
+    echo 'inserisci i dati:';
 } else {
-    if (!is_numeric($age) == false) {
-    echo "l'età deve essere inserito tramite cifre";
- } else (!strpost($email, '@') == false ) {
-    echo "l'email deve contenere la @ ";
-} };
+    if ( $name < 3 ) {
+        echo 'Il nome deve contenere più di tre caratteri.';
+    } else {
+        if(!is_numeric($age) == false) {
+            echo "l'età deve essere inserito tramite cifre.";
+            } else {
+                if (!strpos($email, '@') == false ) {
+                echo "l'email deve contenere la @ una volta.";
+                } else {
+                echo 'Accesso Autorizzato';
+                }
+            }
+    }
+}
+
+
+
+
+
 
 ?>
 
