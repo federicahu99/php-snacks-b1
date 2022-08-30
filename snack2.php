@@ -17,13 +17,13 @@ if (!$name || !$age || !$email) {
     echo 'inserisci i dati:';
 } else {
     if ( $name < 3 ) {
-        echo 'Il nome deve contenere più di tre caratteri.';
+        echo 'Accesso Negato';
     } else {
-        if(!is_numeric($age) == false) {
-            echo "l'età deve essere inserito tramite cifre.";
+        if(!is_numeric($age)) {
+            echo "Accesso Negato";
             } else {
-                if (!strpos($email, '@') == false ) {
-                echo "l'email deve contenere la @ una volta.";
+                if (!strpos($email, '@') ) {
+                echo "accesso Negato";
                 } else {
                 echo 'Accesso Autorizzato';
                 }
@@ -53,7 +53,7 @@ if (!$name || !$age || !$email) {
             <input type="text" id="name" name="name">
         </div>
         <div>
-            <label for="age">Cognome</label>
+            <label for="age">Età</label>
             <input type="text" id="age" name="age">
         </div>
         <div>
