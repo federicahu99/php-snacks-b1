@@ -13,31 +13,32 @@ $games = [
         'guest' => 'Knights',
         'home_point' => '195',
         'guest_point' => '188',
-    ];
+    ],
     [ 
         'city' => 'San Francisco',
         'home' => 'Warriors',
         'guest' => 'Celtics',
         'home_point' => '211',
         'guest_point' => '201',
-    ];
+    ],
     [ 
         'city' => 'Washington',
         'home' => 'Wizards',
         'guest' => 'Nuggets',
         'home_point' => '124',
         'guest_point' => '147',
-    ];
+    ],
     [ 
         'city' => 'Miami',
         'home' => 'Bulls',
         'guest' => 'Jazzs',
         'home_point' => '197',
         'guest_point' => '214',
+    ],
     ];
-    ];
-
-var_dump($games);
+// echo "<pre>";
+// var_dump($games);
+// echo "</pre>";
 
 ?>
 
@@ -54,7 +55,7 @@ var_dump($games);
     <ul>
         <?php for( $i = 0 ; $i < count($games) -1; $i++) : ?>
         <li>
-        <h5><?php $games['city'] ?></h5>
+        <h5><?php echo $games[$i]['city']; ?></h5>
         </li>
         <?php endfor; ?>
     </ul>

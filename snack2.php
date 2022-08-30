@@ -1,4 +1,5 @@
 <?php 
+
 /*
 SNACK 2
 Passare come parametri GET name, mail e age e verificare 
@@ -8,7 +9,18 @@ punto e una chiocciola e che age sia un numero. Se tutto è ok
 stampare “Accesso riuscito”, altrimenti “Accesso negato”;
 */
 
+$name= $_GET['name'] ?? '';
+$age= $_GET['age'] ?? '';
+$email= $_GET['email'] ?? '';
 
+if ( $name < 3 ) {
+    echo 'Il nome deve contenere più di tre caratteri';
+} else {
+    if (!is_numeric($age) == false) {
+    echo "l'età deve essere inserito tramite cifre";
+ } else (!strpost($email, '@') == false ) {
+    echo "l'email deve contenere la @ ";
+} };
 
 ?>
 
@@ -24,15 +36,15 @@ stampare “Accesso riuscito”, altrimenti “Accesso negato”;
     <form action="" method="GET">
         <div>
             <label for="name">Nome</label>
-            <input type="text" id="name">
+            <input type="text" id="name" name="name">
         </div>
         <div>
-            <label for="last-name">Cognome</label>
-            <input type="text" id="last-name">
+            <label for="age">Cognome</label>
+            <input type="text" id="age" name="age">
         </div>
         <div>
             <label for="email">Email</label>
-            <input type="text" id="email">
+            <input type="email" id="email" name="email">
         </div>
         <button type="submit">Accedi</button>
     </form>
