@@ -5,7 +5,7 @@
     array di post associati a quella data. 
     Stampare ogni data con i relativi post. */
 
-$posts = [
+$date = [
     '10/01/2019' => [
         [
             'title' => 'Post 1',
@@ -43,6 +43,9 @@ $posts = [
         ]
     ],
 ];
+
+$array_key = array_keys($date);
+
 ?>
 
 <!DOCTYPE html>
@@ -54,19 +57,14 @@ $posts = [
     <title>Snack3</title>
 </head>
 <body>
-    <div>
-        <?php for( $i = 0 ; $i < count($post) - 1 ; $i++ ) : ?>
-        <h3> <?php echo $post[$i]; ?> </h3>
-            <div>
-                <?php for( $i = 0 ; $i < count($post[$i]) - 1 ; $i++ ) : ?>
-                <div>
-                    <?php echo $post[$i]['title']; ?>
-                    <?php echo $post[$i]['author']; ?>
-                    <?php echo $post[$i]['text']; ?>
-                </div>
-                <?php endfor; ?>
-            </div>
-        <?php endfor; ?>
-    </div>
+    <?php for( $i = 0 ; $i < count($array_key) ; $i++ ) {
+        $index= $array_key[$i];  ?>
+        <h3> <?php echo $array_key[$i]; ?> </h3>
+        <?php for( $j = 0 ; $j < count($date[$index]) ; $j++ ) { ?>
+            <h2> <?php echo $date[$index][$j]['title']; ?> </h2>
+            <h3> <?php echo $date[$index][$j]['author']; ?> </h3>
+            <h3> <?php echo $date[$index][$j]['text']; ?> </h3>
+        <?php } ?>
+        <?php } ?>
 </body>
 </html>
